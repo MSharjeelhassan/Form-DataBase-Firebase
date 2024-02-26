@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form FireBase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <form action="https://facebook.com" autocomplete="on">
+            <div class="details">
+                <p>Select City</p>
+                <select name="city" id="selectCity">
+                    <option value=""  selected hidden >Select the City</option>
+                    <option value="khi">Karachi</option>
+                    <option value="lah">Lahore</option>
+                    <option value="isl">Islamabad</option>
+                </select>
+                <!-- <input type="text" placeholder="Select City" required> -->
+                <p>Full Name</p>
+                <input type="text" placeholder="Full Name" required>
+                <p>Email</p>
+                <input type="email" placeholder="email" required>
+                <p>CNIC</p>
+                <input type="text" placeholder="CNIC" required>
+                <p>Date Of Birth</p>
+                <input type="date" placeholder="dd/mm/yy" required>
+            </div>
+
+            <div class="event">
+                <p>Select Course or Event</p>
+                <input type="text" placeholder="Select Course or Event">
+                <p>Father Name</p>
+                <input type="text" placeholder="Father Name" required>
+                <p>Phone Number</p>
+                <input type="number" placeholder="Phone Number" required>
+                <p>Father CNIC</p>
+                <input type="text" placeholder="Father CNIC (Optional)">
+                <p>Select Gender</p>
+                <input type="text" placeholder="Select Gender">
+
+            </div>
+            <!-- <div id="btn">
+                <input type="submit" value="Submit">
+            </div> -->
+
+            <div class="photo">
+     
+    </div>
+    <div class="notes">
+
+    </div>
+    <div id="btn">
+        <input type="submit" value="ignore this Submit">
+    </div>
+    </div>
+</form>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="firebaseCode.js"></script>
+</body>
+
+</html>
