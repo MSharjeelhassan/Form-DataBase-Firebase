@@ -13,13 +13,12 @@
         <form action="https://facebook.com" autocomplete="on">
             <div class="details">
                 <p>Select City</p>
-                <select name="city" id="selectCity">
-                    <option value=""  selected hidden >Select the City</option>
+                <select required name="city" id="selectCity" style="border : 1px solid red">
+                    <option value="" selected hidden>Select the City</option>
                     <option value="khi">Karachi</option>
                     <option value="lah">Lahore</option>
                     <option value="isl">Islamabad</option>
                 </select>
-                <!-- <input type="text" placeholder="Select City" required> -->
                 <p>Full Name</p>
                 <input type="text" placeholder="Full Name" required>
                 <p>Email</p>
@@ -32,32 +31,75 @@
 
             <div class="event">
                 <p>Select Course or Event</p>
-                <input type="text" placeholder="Select Course or Event">
-                <p>Father Name</p>
-                <input type="text" placeholder="Father Name" required>
-                <p>Phone Number</p>
-                <input type="number" placeholder="Phone Number" required>
-                <p>Father CNIC</p>
-                <input type="text" placeholder="Father CNIC (Optional)">
-                <p>Select Gender</p>
-                <input type="text" placeholder="Select Gender">
 
+                <select required name="selcetCourse" id="selectCourse">
+                    <option value="" disabled selected hidden>Select Course or Event</option>
+                    <option value="js">Java Script</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+
+                </select>
             </div>
-            <!-- <div id="btn">
-                <input type="submit" value="Submit">
-            </div> -->
+
+            <p>Father Name</p>
+            <input type="text" placeholder="Father Name" required>
+            <p>Phone Number</p>
+            <input type="number" placeholder="Phone Number" required>
+            <p>Father CNIC</p>
+            <input type="text" placeholder="Father CNIC (Optional)">
+            <p>Select Gender</p>
+
+            <select required name="gender" id="gender">
+
+                <option value="gender">Male</option>
+                <option value="" selected disabled>Select</option>
+                <option value="gender">Female</option>
+            </select>
+
+            <div id="address">
+                <p>Address</p>
+                <input required type="text" placeholder="Address">
+            </div>
+
+            <div id="lastQuali">
+                <p>Last Qualification</p>
+                <select required name="lastQuali" id="">
+                    <option selected disabled hidden value="">Last Qualification</option>
+                    <option value="bachelors">Bachelors</option>
+                    <option value="inter">Intermediate</option>
+                    <option value="metric">Metric</option>
+                </select>
+            </div>
+
+            <div id="laptop">
+                <p>Do you have a Laptop</p>
+                <select required name="laptop" id="">
+                    <option selected disabled hidden value="">Do you have a laptop</option>
+                    <option value="yes">Yes I do </option>
+                    <option value="no">No I dont</option>
+                </select>
+            </div>
 
             <div class="photo">
-     
-    </div>
-    <div class="notes">
+                <p>Picture</p>
+                <input accept="image/*" required type="file" name="image" id="">
 
+            </div>
+            <div class="notes">
+<ol>
+    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo odit deleniti sunt, tempora minima corporis mollitia temporibus, soluta beatae qui porro, laboriosam ullam? Quam aperiam architecto fugiat deleniti molestias iure!80</li>
+    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere vel inventore perspiciatis. Corporis, nemo nulla fuga voluptas perferendis tempora quis alias voluptates, tempore distinctio corrupti?</li>
+    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio cum voluptates quae voluptatem exercitationem.</li>
+    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, voluptatem.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+</ol>
+            </div>
+            <div id="btn">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
     </div>
-    <div id="btn">
-        <input type="submit" value="ignore this Submit">
-    </div>
-    </div>
-</form>
+
     <script type="module" src="script.js"></script>
     <script type="module" src="firebaseCode.js"></script>
 </body>
