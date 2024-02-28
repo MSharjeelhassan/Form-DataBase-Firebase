@@ -76,7 +76,9 @@ console.log(cnic);
 
   obj.id = push(ref(database,"Task/")).key; // push-databse 
     var reference = ref(database, `Task/${obj.id}`);
-     set(reference,obj)
+     set(reference,obj);
+
+     
 };
 
 
