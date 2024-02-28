@@ -9,99 +9,137 @@
 </head>
 
 <body>
-    <div class="main">
-        <form action="https://facebook.com" autocomplete="on">
+    
+    <div class="mainDiv">
+        <form action="">
             <div class="details">
-                <p>Select City</p>
-                <select required name="city" id="selectCity" style="border : 1px solid red">
+                <label>Select City</label>
+                <br>
+                <select name="city" id="selectCity" style="border : 1px solid red">
                     <option value="" selected hidden>Select the City</option>
                     <option value="khi">Karachi</option>
                     <option value="lah">Lahore</option>
                     <option value="isl">Islamabad</option>
-                </select>
-                <p>Full Name</p>
-                <input type="text" placeholder="Full Name" required>
-                <p>Email</p>
-                <input type="email" placeholder="email" required>
-                <p>CNIC</p>
-                <input type="text" placeholder="CNIC" required>
-                <p>Date Of Birth</p>
-                <input type="date" placeholder="dd/mm/yy" required>
+                </select><br><br>
+                <label>Full Name</label><br>
+                <input type="text" id="inp" placeholder="Full Name">
+                <br><br>
+                <label>Email</label>
+                <br>
+                <input type="email" placeholder="email">
+                <br><br>
+                <label>CNIC</label>
+                <br>
+                <input type="text" placeholder="CNIC">
+                <br><br>
+                <label>Date Of Birth</label>
+                <br>
+                <input type="date" placeholder="dd/mm/yy">
+                <br><br>
             </div>
 
             <div class="event">
-                <p>Select Course or Event</p>
+                <label>Select Course or Event</label>
+                <br>
 
-                <select required name="selcetCourse" id="selectCourse">
+                <select name="selcetCourse" id="selectCourse">
                     <option value="" disabled selected hidden>Select Course or Event</option>
                     <option value="js">Java Script</option>
                     <option value="html">HTML</option>
                     <option value="css">CSS</option>
 
                 </select>
+                <br><br>
             </div>
 
-            <p>Father Name</p>
-            <input type="text" placeholder="Father Name" required>
-            <p>Phone Number</p>
-            <input type="number" placeholder="Phone Number" required>
-            <p>Father CNIC</p>
+            <label>Father Name</label>
+            <br>
+            <input type="text" placeholder="Father Name">
+            <br><br>
+            <label>Phone Number</label>
+            <br>
+            <input type="number" placeholder="Phone Number">
+            <br><br>
+            <label>Father CNIC</label>
+            <br>
             <input type="text" placeholder="Father CNIC (Optional)">
-            <p>Select Gender</p>
+            <br><br>
+            <label>Select Gender</label>
+            <br>
 
-            <select required name="gender" id="gender">
+            <select name="gender" id="gender">
 
-                <option value="gender">Male</option>
                 <option value="" selected disabled>Select</option>
+                <option value="gender">Male</option>
                 <option value="gender">Female</option>
             </select>
+            <br><br>
 
-            <div id="address">
-                <p>Address</p>
-                <input required type="text" placeholder="Address">
+            <div>
+                <label>Address</label>
+                <br>
+                <input id="address" type="text" placeholder="Address">
+                <br><br>
             </div>
 
-            <div id="lastQuali">
-                <p>Last Qualification</p>
-                <select required name="lastQuali" id="">
+            <div>
+                <label>Last Qualification</label>
+                <br>
+                <select name="lastQuali" id="lastQuali">
                     <option selected disabled hidden value="">Last Qualification</option>
                     <option value="bachelors">Bachelors</option>
                     <option value="inter">Intermediate</option>
                     <option value="metric">Metric</option>
                 </select>
+                <br><br>
             </div>
 
-            <div id="laptop">
-                <p>Do you have a Laptop</p>
-                <select required name="laptop" id="">
+            <div>
+                <label>Do you have a Laptop</label>
+                <br>
+                <select name="laptop" id="laptop">
                     <option selected disabled hidden value="">Do you have a laptop</option>
                     <option value="yes">Yes I do </option>
                     <option value="no">No I dont</option>
                 </select>
+                <br><br>
             </div>
 
             <div class="photo">
-                <p>Picture</p>
-                <input accept="image/*" required type="file" name="image" id="">
-
+                <label>Picture</label>
+                <br>
+                <input accept="image/*" type="file" name="image" id="photo">
+                <br><br>
             </div>
             <div class="notes">
-<ol>
-    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo odit deleniti sunt, tempora minima corporis mollitia temporibus, soluta beatae qui porro, laboriosam ullam? Quam aperiam architecto fugiat deleniti molestias iure!80</li>
-    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere vel inventore perspiciatis. Corporis, nemo nulla fuga voluptas perferendis tempora quis alias voluptates, tempore distinctio corrupti?</li>
-    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio cum voluptates quae voluptatem exercitationem.</li>
-    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, voluptatem.</li>
-    <li>Lorem ipsum dolor sit amet.</li>
-</ol>
+                <ol>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo odit deleniti sunt, tempora
+                        minima corporis mollitia temporibus, soluta beatae qui porro, laboriosam ullam? Quam aperiam
+                        architecto fugiat deleniti molestias iure!80</li>
+                    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere vel inventore perspiciatis.
+                        Corporis, nemo nulla fuga voluptas perferendis tempora quis alias voluptates, tempore distinctio
+                        corrupti?</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio cum voluptates quae
+                        voluptatem exercitationem.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, voluptatem.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                </ol>
             </div>
-            <div id="btn">
-                <input type="submit" value="Submit">
-            </div>
+            <!-- <div id="btn">
+                <input  type="submit" value="Submit">
+            </div>  -->
         </form>
+        <button id="btn" onclick="abc()">Click me</button>
     </div>
 
+
+
+<!-- <input id="inp" type="text" name="">
+    <button onclick="abc()">ABC</button> -->
+
+
     <script type="module" src="script.js"></script>
-    <script type="module" src="firebaseCode.js"></script>
+    <!-- <script type="module" src="firebaseCode.js"></script> -->
 </body>
 
 </html>
