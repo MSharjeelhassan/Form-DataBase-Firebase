@@ -54,6 +54,29 @@ console.log(cnic);
  const photo = document.getElementById('photo');
 //  let text= document.createTextNode('* Upload');
 //  photo.appendChild(text);
+const showData = document.getElementById('seeForm');
+console.log(showData);
+const enterForm = document.getElementById('enterForm');
+
+const enterNameFromData = document.getElementById('enterNameFromData').innerText;
+const showCity = document.getElementById('showCity').value;
+// console.log(showCity);
+const showFullName = document.getElementById('showFullName').value;
+const showEmail = document.getElementById('showEmail').value;
+const showCnic = document.getElementById('showCnic').value;
+const showDOB = document.getElementById('showDOB').value;
+const showCourse = document.getElementById('showCourse').value;
+const showFatherName = document.getElementById('showFatherName').value;
+const showNumber = document.getElementById('showNumber').value;
+const showFatherCnic = document.getElementById('showFatherCnic').value;
+const showGender = document.getElementById('showGender').value;
+const ShowAddress = document.getElementById('ShowAddress').value;
+const ShowLastQuali = document.getElementById('ShowLastQuali').value;
+const ShowLaptop  = document.getElementById('ShowLaptop').value;
+const ShowPhoto  = document.getElementById('ShowPhoto').value;
+const inputSearch = document.getElementById('inputSearch').value;
+
+
 
  console.log(photo);
  window.abc = function(){
@@ -74,18 +97,67 @@ console.log(cnic);
 
  };
 
+ if(obj.CNIC.length !=13){
+alert("Please enter complete CNIC number")
+ }
+else{
   obj.id = push(ref(database,"Task/")).key; // push-databse 
     var reference = ref(database, `Task/${obj.id}`);
      set(reference,obj);
-
-     
+}
+    //  return (obj.id);// main yeh chah raha tha ka id return karaon r isey bahr kahen variab;e main store kar lon for further use
+    alert(`This user I.D ${obj.id}`)
 };
 
+// let idD = (obj.id);
+// console.log(idD);
 
-function getData() {
-    var reference = ref(database, "Task/");
-    onValue(reference, function (data) {
-      console.log(data.val());
+
+function goHome(){
+ alert("i am working");
+ showData.style.display ="none";
+ enterForm.style.display = "block";
+
+};
+
+//********************GET DATA FROM FIREBASE RTDB START */ -Nru2J115xeX_VNVKeUP
+let getData = function()  {
+    var reference = ref(database, "Task/-Nru2J115xeX_VNVKeUP");
+    onValue(reference, function (snapshot) {
+      // enterNameFromData = `Hello Respected `
+      console.log(snapshot.val());
+      let foundData = snapshot.val()
+      console.log(foundData.FullName)
+      // return foundData;
+      showFullName = foundData.FullName;
+      showEmail =foundData.email;
+      showCnic = foundData.CNIC;
+      showDOB =foundData.dob;
+      showCourse =foundData.courseEvent;
+      showFatherName = foundData.FatherName;
+      showNumber = foundData.phoneNumber;
+      showFatherCnic = foundData.fatherCNIC;
+      showGender =foundData.Gender;
+      ShowAddress =foundData.Address;
+      ShowLastQuali = foundData.Qualification;
+      ShowLaptop = foundData.Laptop;
+
     });
   }
-  getData();
+
+  const foundData = console.log(getData());
+// alert('found data')
+  console.log(foundData);
+
+  //**************ENDS**** */
+
+const goToDatabase = function(){
+alert('hello')
+  showData.style.display ="block";
+ enterForm.style.display = "none";
+}
+// +++++++++++Search function*****************
+  const search = function(){
+
+
+  }

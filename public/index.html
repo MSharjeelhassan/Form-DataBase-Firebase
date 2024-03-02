@@ -6,141 +6,247 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form FireBase</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body class="bg-light">
-    <h1 class="text-center">Student Information Form</h1>
-    <div class="mainDiv container " >
-        <form class="" action="">
-            <div class="details d-flex gap-5">
-                <div class="w-100 ">
-                <label>Select City</label>
-                <br>
-                <select name="city" id="selectCity" class="rounded pill">
-                    <option value="" selected hidden>Select the City</option>
-                    <option value="khi">Karachi</option>
-                    <option value="lah">Lahore</option>
-                    <option value="isl">Islamabad</option>
-                </select><br><br>
-                <label>Full Name</label><br>
-                <input type="text" id="inp" placeholder="Full Name">
-                <br><br>
-                <label>Email</label>
-                <br>
-                <input type="email" placeholder="email">
-                <br><br>
-                <label>CNIC</label>
-                <br>
-                <input type="text" placeholder="CNIC">
-                <br><br>
-                <label>Date Of Birth</label>
-                <br>
-                <input type="date" placeholder="dd/mm/yy">
-                <br><br>
-            </div>
-                <div class="w-100 ">
-                <div class="event">
-                    <label>Select Course or Event</label>
+    <div class="" id="enterForm">
+        <div class="container d-flex justify-content-around">
+            <h1 class="text-center">Student Information Form</h1>
+            <button onclick="goToDatabase()" class="rounded pill w-20 px-4 ">DataBase</button>
+        </div>
+        <div class="mainDiv container ">
+            <form class="" action="">
+                <div class="details d-flex gap-5">
+                    <div class="w-100 ">
+                        <label>Select City</label>
+                        <br>
+                        <select name="city" id="selectCity" class="rounded pill">
+                            <option value="" selected hidden>Select the City</option>
+                            <option value="khi">Karachi</option>
+                            <option value="lah">Lahore</option>
+                            <option value="isl">Islamabad</option>
+                        </select><br><br>
+                        <label>Full Name</label><br>
+                        <input type="text" id="inp" placeholder="Full Name">
+                        <br><br>
+                        <label>Email</label>
+                        <br>
+                        <input type="email" placeholder="email">
+                        <br><br>
+                        <label>CNIC</label>
+                        <br>
+                        <input type="text" placeholder="CNIC">
+                        <br><br>
+                        <label>Date Of Birth</label>
+                        <br>
+                        <input type="date" placeholder="dd/mm/yy">
+                        <br><br>
+                    </div>
+                    <div class="w-100 ">
+                        <div class="event">
+                            <label>Select Course or Event</label>
+                            <br>
+
+                            <select class="w-100" name="selcetCourse" id="selectCourse">
+                                <option value="" disabled selected hidden>Select Course or Event</option>
+                                <option value="js">Java Script</option>
+                                <option value="html">HTML</option>
+                                <option value="css">CSS</option>
+
+                            </select>
+                            <br><br>
+                        </div>
+
+                        <label>Father Name</label>
+                        <br>
+                        <input type="text" placeholder="Father Name">
+                        <br><br>
+                        <label>Phone Number</label>
+                        <br>
+                        <input type="number" placeholder="Phone Number">
+                        <br><br>
+                        <label>Father CNIC</label>
+                        <br>
+                        <input type="text" placeholder="Father CNIC (Optional)">
+                        <br><br>
+                        <label>Select Gender</label>
+                        <br>
+
+                        <select name="gender" id="gender">
+
+                            <option value="" selected disabled>Select</option>
+                            <option value="gender">Male</option>
+                            <option value="gender">Female</option>
+                        </select>
+                        <br><br>
+                    </div>
+                </div>
+                <div>
+                    <label>Address</label>
                     <br>
-                    
-                    <select class="w-100" name="selcetCourse" id="selectCourse">
-                        <option value="" disabled selected hidden>Select Course or Event</option>
-                        <option value="js">Java Script</option>
-                        <option value="html">HTML</option>
-                        <option value="css">CSS</option>
-                        
+                    <input class="w-100" id="address" type="text" placeholder="Address">
+                    <br><br>
+                </div>
+
+                <div>
+                    <label>Last Qualification</label>
+                    <br>
+                    <select name="lastQuali" class="w-100" id="lastQuali">
+                        <option selected disabled hidden value="">Last Qualification</option>
+                        <option value="bachelors">Bachelors</option>
+                        <option value="inter">Intermediate</option>
+                        <option value="metric">Metric</option>
                     </select>
                     <br><br>
                 </div>
-                
-                <label>Father Name</label>
-                <br>
-                <input type="text" placeholder="Father Name">
-                <br><br>
-                <label>Phone Number</label>
-                <br>
-                <input type="number" placeholder="Phone Number">
-                <br><br>
-                <label>Father CNIC</label>
-                <br>
-                <input type="text" placeholder="Father CNIC (Optional)">
-                <br><br>
-                <label>Select Gender</label>
-                <br>
-                
-                <select name="gender" id="gender">
-                    
-                    <option value="" selected disabled>Select</option>
-                    <option value="gender">Male</option>
-                    <option value="gender">Female</option>
-                </select>
-                <br><br>
-            </div>
-            </div>
-            <div>
-                <label>Address</label>
-                <br>
-                <input class="w-100" id="address" type="text" placeholder="Address">
-                <br><br>
-            </div>
 
-            <div>
-                <label>Last Qualification</label>
-                <br>
-                <select name="lastQuali" class="w-100" id="lastQuali">
-                    <option selected disabled hidden value="">Last Qualification</option>
-                    <option value="bachelors">Bachelors</option>
-                    <option value="inter">Intermediate</option>
-                    <option value="metric">Metric</option>
-                </select>
-                <br><br>
-            </div>
+                <div>
+                    <label>Do you have a Laptop</label>
+                    <br>
+                    <select name="laptop" class="w-100" id="laptop">
+                        <option selected disabled hidden value="">Do you have a laptop</option>
+                        <option value="yes">Yes I do </option>
+                        <option value="no">No I dont</option>
+                    </select>
+                    <br><br>
+                </div>
 
-            <div>
-                <label>Do you have a Laptop</label>
-                <br>
-                <select name="laptop" class="w-100" id="laptop">
-                    <option selected disabled hidden value="">Do you have a laptop</option>
-                    <option value="yes">Yes I do </option>
-                    <option value="no">No I dont</option>
-                </select>
-                <br><br>
-            </div>
-
-            <div class="photo">
-                <label>Picture</label>
-                <br>
-                <input accept="image/*" type="file" name="image" id="photo">
-                <br><br>
-            </div>
-            <div class="notes">
-                <ol>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo odit deleniti sunt, tempora
-                        minima corporis mollitia temporibus, soluta beatae qui porro, laboriosam ullam? Quam aperiam
-                        architecto fugiat deleniti molestias iure!80</li>
-                    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere vel inventore perspiciatis.
-                        Corporis, nemo nulla fuga voluptas perferendis tempora quis alias voluptates, tempore distinctio
-                        corrupti?</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio cum voluptates quae
-                        voluptatem exercitationem.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, voluptatem.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                </ol>
-            </div>
-            <!-- <div id="btn">
+                <div class="photo">
+                    <label>Picture</label>
+                    <br>
+                    <input accept="image/*" type="file" name="image" id="photo">
+                    <br><br>
+                </div>
+                <div class="notes">
+                    <ol>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo odit deleniti sunt,
+                            tempora
+                            minima corporis mollitia temporibus, soluta beatae qui porro, laboriosam ullam? Quam aperiam
+                            architecto fugiat deleniti molestias iure!80</li>
+                        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere vel inventore perspiciatis.
+                            Corporis, nemo nulla fuga voluptas perferendis tempora quis alias voluptates, tempore
+                            distinctio
+                            corrupti?</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio cum voluptates quae
+                            voluptatem exercitationem.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, voluptatem.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                    </ol>
+                </div>
+                <!-- <div id="btn">
                 <input  type="submit" value="Submit">
             </div>  -->
-        </form>
-        <button class="w-100 rounded bg-primary" id="btn" onclick="abc()">Submit</button>
+            </form>
+            <button class="w-100 rounded bg-primary" id="btn" onclick="abc()">Submit</button>
+        </div>
     </div>
 
+    <div id="seeForm" class="container">
 
 
-<!-- <input id="inp" type="text" name="">
-    <button onclick="abc()">ABC</button> -->
+        <div class=" my-3 display-flex ">
+            <label class="fs-5  d-block" for="">Search by ID in the DataBase </label>
+            <input class="w-25 d-block" id="inputSearch" type="text">
+            <button onclick="getData()" class="rounded d-block" id="searchDatabase">Search</button>
+        </div>
+        <div id="enterNameFromData" class="">
+            Hello JJJJ
+        </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <label>City Name</label>
+        <br>
+        <input disabled id="showCity" class="rounded pill">
+
+        </select><br><br>
+        <label>Full Name</label><br>
+        <input disabled type="text" id="showFullName">
+        <br><br>
+        <label>Email</label>
+        <br>
+        <input disabled id="showEmail">
+        <br><br>
+        <label>CNIC</label>
+        <br>
+        <input disabled id="showCnic" type="text">
+        <br><br>
+        <label>Date Of Birth</label>
+        <br>
+        <input disabled id="showDOB">
+        <br><br>
+
+        <div class="w-100 ">
+            <div class="event">
+                <label>Selected Course</label>
+                <br>
+
+                <input class="w-100" disabled id="showCourse">
+
+                <br><br>
+            </div>
+
+            <label>Father Name</label>
+            <br>
+            <input id="showFatherName" disabled>
+            <br><br>
+            <label>Phone Number</label>
+            <br>
+            <input id="showNumber" disabled>
+            <br><br>
+            <label>Father CNIC</label>
+            <br>
+            <input disabled id="showFatherCnic">
+            <br><br>
+            <label>Gender</label>
+            <br>
+
+            <input disabled id="showGender">
+
+
+            <br><br>
+        </div>
+
+        <div>
+            <label>Address</label>
+            <br>
+            <input class="w-100" id="ShowAddress" disabled>
+            <br><br>
+        </div>
+
+        <div>
+            <label>Qualification</label>
+            <br>
+            <input disabled class="w-100" id="ShowLastQuali">
+
+            <br><br>
+        </div>
+
+        <div>
+            <label>Do you have a Laptop</label>
+            <br>
+            <input disabled class="w-100" id="ShowLaptop">
+
+            <br><br>
+        </div>
+
+        <div class="photo">
+            <label>Picture</label>
+            <br>
+            <input disabled id="ShowPhoto">
+            <br><br>
+        </div>
+
+        <button onclick="goHome()" id="goBack" class="w-100 rounded">Go Back</button>
+    </div>
+
+    <!-- <button onclick="goHome()">dddds</button> -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script type="module" src="script.js"></script>
     <!-- <script type="module" src="firebaseCode.js"></script> -->
 </body>
