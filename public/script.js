@@ -61,7 +61,7 @@ const enterForm = document.getElementById('enterForm');
 const enterNameFromData = document.getElementById('enterNameFromData').innerText;
 const showCity = document.getElementById('showCity').value;
 // console.log(showCity);
-const showFullName = document.getElementById('showFullName').value;
+const showFullName = document.getElementById('showFullName');
 const showEmail = document.getElementById('showEmail').value;
 const showCnic = document.getElementById('showCnic').value;
 const showDOB = document.getElementById('showDOB').value;
@@ -113,7 +113,7 @@ else{
 // console.log(idD);
 
 
-function goHome(){
+window.goHome = function (){
  alert("i am working");
  showData.style.display ="none";
  enterForm.style.display = "block";
@@ -121,26 +121,36 @@ function goHome(){
 };
 
 //********************GET DATA FROM FIREBASE RTDB START */ -Nru2J115xeX_VNVKeUP
-let getData = function()  {
-    var reference = ref(database, "Task/-Nru2J115xeX_VNVKeUP");
+window.getData = function()  {
+    var reference = ref(database, "Task/");
     onValue(reference, function (snapshot) {
       // enterNameFromData = `Hello Respected `
       console.log(snapshot.val());
       let foundData = snapshot.val()
       console.log(foundData.FullName)
+      console.log(Object.values(foundData))
+      var a = Object.values(foundData)
+      for (let index = 0; index < a.length; index++) {
+        console.log(a[index]);
+        if (a.id == inputSearch) {
+          
+          showFullName.value = foundData.FullName;
+         
+          showEmail =foundData.email;
+          showCnic = foundData.CNIC;
+          showDOB =foundData.dob;
+          showCourse =foundData.courseEvent;
+          showFatherName = foundData.FatherName;
+          showNumber = foundData.phoneNumber;
+          showFatherCnic = foundData.fatherCNIC;
+          showGender =foundData.Gender;
+          ShowAddress =foundData.Address;
+          ShowLastQuali = foundData.Qualification;
+          ShowLaptop = foundData.Laptop;
+        }
+        else{console.log("Failed")}
+      }
       // return foundData;
-      showFullName = foundData.FullName;
-      showEmail =foundData.email;
-      showCnic = foundData.CNIC;
-      showDOB =foundData.dob;
-      showCourse =foundData.courseEvent;
-      showFatherName = foundData.FatherName;
-      showNumber = foundData.phoneNumber;
-      showFatherCnic = foundData.fatherCNIC;
-      showGender =foundData.Gender;
-      ShowAddress =foundData.Address;
-      ShowLastQuali = foundData.Qualification;
-      ShowLaptop = foundData.Laptop;
 
     });
   }
@@ -151,7 +161,7 @@ let getData = function()  {
 
   //**************ENDS**** */
 
-const goToDatabase = function(){
+window.goToDatabase = function(){
 alert('hello')
   showData.style.display ="block";
  enterForm.style.display = "none";
